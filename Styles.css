@@ -1,0 +1,82 @@
+ body {
+    background-color: rgb(226, 206, 176);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ }
+ .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+}
+ .btn {
+    background-color: rgb(143, 247, 212);
+    font-size: 20px;
+    padding: 12px 24px;
+    cursor:pointer;
+    transition: transform .2s, opacity .2s;
+ }
+ .btn:hover {
+    transform: translateY(-1px);
+    background-color: rgb(113, 241, 241);
+ }
+ .carta {
+    display: none;
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    padding: 30px 50px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    max-width: 1000px;
+    width: 100%;
+
+    
+ }
+ .carta blockquote {
+        font-size: 20px;
+        font-family:'Arial, sans-serif';
+        text-align: justify;
+
+    }
+ .carta h1 {
+        font-size: 25px;
+        font-family:'Arial, sans-serif';
+        text-align: center;
+
+    }
+ .carta.show {
+  display: block; 
+  animation: fadeInUp .28s ease both; 
+}
+ @keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ /* --- RESPONSIVIDADE --- */
+ @media (max-width: 600px) {
+  .btn {
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+   .carta blockquote {
+        font-size: 24px;
+        font-family:'Arial, sans-serif';
+        text-align: justify;
+
+    }
+ .carta h1 {
+        font-size: 30px;
+        font-family:'Arial, sans-serif';
+        text-align: center;
+
+    }
+ }
